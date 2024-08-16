@@ -122,6 +122,13 @@ func (c *ReConn) Close(ctx context.Context) error {
 	return err
 }
 
+func (c *ReConn) IsClosed() bool {
+	if c.Conn == nil {
+		return true
+	}
+	return c.Conn.IsClosed()
+}
+
 func (c *ReConn) checkConn(ctx context.Context) error {
 	if c.Conn != nil && !c.Conn.IsClosed() {
 		return nil

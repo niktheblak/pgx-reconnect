@@ -6,7 +6,7 @@ toolchain go1.23.1
 
 require (
 	github.com/cenkalti/backoff/v4 v4.3.0
-	github.com/jackc/pgx/v5 v5.6.0
+	github.com/jackc/pgx/v5 v5.7.0
 )
 
 require (
